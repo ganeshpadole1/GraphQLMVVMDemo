@@ -13,6 +13,8 @@
 		3075CBD82CA956330056319D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3075CBD62CA956330056319D /* Main.storyboard */; };
 		3075CBDA2CA956360056319D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3075CBD92CA956350056319D /* Assets.xcassets */; };
 		3075CBDD2CA956360056319D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3075CBDB2CA956360056319D /* LaunchScreen.storyboard */; };
+		3075CBE82CA9625B0056319D /* SpaceXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075CBE72CA9625B0056319D /* SpaceXViewController.swift */; };
+		C3B2D635E07BDD57C02346DB /* Pods_GraphQLMVVMDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3E2321B82DC7506360438B2 /* Pods_GraphQLMVVMDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		3075CBD92CA956350056319D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3075CBDC2CA956360056319D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3075CBDE2CA956360056319D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3075CBE72CA9625B0056319D /* SpaceXViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXViewController.swift; sourceTree = "<group>"; };
+		732D0B7A436A4164343C2DB3 /* Pods-GraphQLMVVMDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphQLMVVMDemo.release.xcconfig"; path = "Target Support Files/Pods-GraphQLMVVMDemo/Pods-GraphQLMVVMDemo.release.xcconfig"; sourceTree = "<group>"; };
+		D38BB532D19D1120ACADE01F /* Pods-GraphQLMVVMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphQLMVVMDemo.debug.xcconfig"; path = "Target Support Files/Pods-GraphQLMVVMDemo/Pods-GraphQLMVVMDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		F3E2321B82DC7506360438B2 /* Pods_GraphQLMVVMDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GraphQLMVVMDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3B2D635E07BDD57C02346DB /* Pods_GraphQLMVVMDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				3075CBCF2CA956330056319D /* GraphQLMVVMDemo */,
 				3075CBCE2CA956330056319D /* Products */,
+				75898D01429911AB5780301B /* Pods */,
+				975E4F8A4146BD0FB29ED866 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +65,9 @@
 		3075CBCF2CA956330056319D /* GraphQLMVVMDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3075CBE62CA958810056319D /* Controller */,
+				3075CBE52CA958770056319D /* ViewModel */,
+				3075CBE42CA9586F0056319D /* Model */,
 				3075CBD02CA956330056319D /* AppDelegate.swift */,
 				3075CBD22CA956330056319D /* SceneDelegate.swift */,
 				3075CBD42CA956330056319D /* ViewController.swift */,
@@ -67,6 +79,45 @@
 			path = GraphQLMVVMDemo;
 			sourceTree = "<group>";
 		};
+		3075CBE42CA9586F0056319D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3075CBE52CA958770056319D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3075CBE62CA958810056319D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3075CBE72CA9625B0056319D /* SpaceXViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		75898D01429911AB5780301B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D38BB532D19D1120ACADE01F /* Pods-GraphQLMVVMDemo.debug.xcconfig */,
+				732D0B7A436A4164343C2DB3 /* Pods-GraphQLMVVMDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		975E4F8A4146BD0FB29ED866 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3E2321B82DC7506360438B2 /* Pods_GraphQLMVVMDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +125,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3075CBE12CA956360056319D /* Build configuration list for PBXNativeTarget "GraphQLMVVMDemo" */;
 			buildPhases = (
+				9F6285A57E6CF12ABA74071D /* [CP] Check Pods Manifest.lock */,
 				3075CBC92CA956330056319D /* Sources */,
 				3075CBCA2CA956330056319D /* Frameworks */,
 				3075CBCB2CA956330056319D /* Resources */,
+				5B18E96DCD45B717AE4B77B0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,11 +186,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5B18E96DCD45B717AE4B77B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GraphQLMVVMDemo/Pods-GraphQLMVVMDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GraphQLMVVMDemo/Pods-GraphQLMVVMDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GraphQLMVVMDemo/Pods-GraphQLMVVMDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F6285A57E6CF12ABA74071D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GraphQLMVVMDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3075CBC92CA956330056319D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3075CBE82CA9625B0056319D /* SpaceXViewController.swift in Sources */,
 				3075CBD52CA956330056319D /* ViewController.swift in Sources */,
 				3075CBD12CA956330056319D /* AppDelegate.swift in Sources */,
 				3075CBD32CA956330056319D /* SceneDelegate.swift in Sources */,
@@ -282,6 +378,7 @@
 		};
 		3075CBE22CA956360056319D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D38BB532D19D1120ACADE01F /* Pods-GraphQLMVVMDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,6 +406,7 @@
 		};
 		3075CBE32CA956360056319D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 732D0B7A436A4164343C2DB3 /* Pods-GraphQLMVVMDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
